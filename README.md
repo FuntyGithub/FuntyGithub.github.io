@@ -1,2 +1,2 @@
 # FuntyGithub.github.io
-A website to link any other website projekts
+A website to link my other website projekts
