@@ -5,9 +5,10 @@
         <title>Funty.org</title>
         <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
         <link rel="icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="style.css">
         <meta name="author" content="Funty" />
         <meta name="description" content="This website links all my projects that have something to do with websites." />
-        <meta name="keywords" content="funty, coding, websites, link, programming" />
+        <meta name="keywords" content="funty, coding, websites, link, programming"  />
    </head>
    <body>
         <div class='navbar no-items section' id='navbar'></div>
@@ -22,13 +23,19 @@
                 <tr>
                     <td>
                         <a class='link' href='https://funty.org/birthday_countdown'><i aria-hidden='true'></i>Birthday countdown</a>
-                        <a class='link' href='https://network.funty.org/'><i aria-hidden='true'></i>Funty´s Netzwerk website</a>
                         <a class='link' href='https://funty.org/mastersofcrafters.de'><i aria-hidden='true'></i>Masters of Crafters Website</a>
+                        <a class='link' href='https://funty.org/pi-site/'><i aria-hidden='true'></i>PI-Site</a>
+
+
+                        <a style="transform: translateY(6px);box-shadow: 0px 0px" class='link' !href='https://network.funty.org/'><i aria-hidden='true'></i>Funty´s Netzwerk website</a>
                     </td>
                     <td>
                         <a class='fab fa-github git' href='https://github.com/FuntyGithub/birthday_countdown' title="Github"></a>
-                        <a class='fab fa-github git' href='https://github.com/FuntysNetzwerk/FuntysNetzwerkWebsite' title="Github"></a>
                         <a class='fab fa-github git' href='https://github.com/FuntyGithub/mastersofcrafters.de' title="Github"></a>
+                        <a class='fab fa-github git' href='https://github.com/FuntyGithub/pi-site' title="Github"></a>
+
+
+                        <a style="transform: translateY(6px);box-shadow: 0px 0px"class='fab fa-github git' !href='https://github.com/FuntysNetzwerk/FuntysNetzwerkWebsite' title="Github"></a>
                     </td>
                 </tr>
             </table>
@@ -53,115 +60,5 @@
                 <i aria-hidden='true' class='fab fa-youtube media' style='line-height: 38px; font-size: 10px;' title="Youtube (Funty)"></i>
             </a>
         </div>
-        <style>
-            body {
-                background-color: black;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            #logo {
-                width: 96px;
-	            height: 96px;
-	            display: block;
-	            margin: 35px auto 20px;
-	            transition: all 1s;
-            }
-            #logo:hover {
-                -webkit-transition: -webkit-transform .8s ease-in-out;
-                -ms-transition: -ms-transform .8s ease-in-out;
-                transition: transform .8s ease-in-out;
-	            transform:rotate(360deg);
-                -ms-transform:rotate(360deg);
-                -webkit-transform:rotate(360deg);
-            }
-            #Name {
-                color: #FF9C3F;
-	            font-size: 3rem;
-	            font-weight: 600;
-	            line-height: 1.25;
-	            display: block;
-	            width: 100%;
-	            text-align: center;
-            }
-            #subtitle {
-                color: #d4761d;
-	            font-size: 1.5rem;
-	            font-weight: 600;
-	            line-height: 1.25;
-	            display: block;
-	            width: 100%;
-	            text-align: center;
-            }
-            #links {
-                max-width: 675px;
-	            width: auto;
-	            display: block;
-	            margin: 27px auto;
-            }
-            .link {
-                display: block;
-	            background-color: #FF9C3F;
-	            color: black;
-	            font-family: var(--font);
-	            text-align: center;
-	            margin-bottom: 20px;
-	            padding: 17px;
-	            text-decoration: none;
-	            font-size: 1rem;
-	            font-weight: bold;
-	            transition: all 0.15s;
-	            box-shadow: 0px 6px #f87e0d;
-            }
-            .link:hover {
-                box-shadow: 0px 8px #ff7b00;
-	            transform: translateY(-2px);
-            }
-            .link:active {
-                transform: translateY(6px);
-	            box-shadow: 0px 0px #FF9C3F;
-            }
-            .git {
-                display: block;
-	            background-color: #FF9C3F;
-	            color: black;
-	            text-align: center;
-	            margin-bottom: 20px;
-	            padding: 19.5px;
-	            transition: all 0.15s;
-	            box-shadow: 0px 6px #f87e0d;
-            }
-            .git:hover {
-                box-shadow: 0px 8px #ff7b00;
-	            transform: translateY(-2px);
-            }
-            .git:active {
-                transform: translateY(6px);
-	            box-shadow: 0px 0px #FF9C3F;
-            }
-            .footer {
-                text-align: center;
-	            font-size: 1.3rem;
-            }
-            .footer a {
-                text-decoration: none;
-            }
-            .media {
-                background: #c20909;
-	            width: 38px;
-	            height: 38px;
-	            text-align: center;
-	            color: Black;
-	            margin-bottom: 40px;
-	            box-shadow: 0px 6px #700606;
-	            transition: all 0.15s;
-            }
-            .media:hover {
-                box-shadow: 0px 8px rgb(133, 6, 6);
-                transform: translateY(-2px);
-            }
-            .media:active {
-                transform: translateY(6px);
-	            box-shadow: 0px 0px #c20909;
-            }
-        </style>
     </body>
 </html>
