@@ -1,65 +1,136 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-        <title>Funty.org</title>
-        <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
-        <link rel="icon" href="./assets/logo.png">
-        <link rel="stylesheet" href="style.css">
-        <meta name="author" content="Funty" />
-        <meta name="description" content="This website links all my projects that have something to do with websites." />
-        <meta name="keywords" content="funty, coding, websites, link, programming"  />
-        <meta name="wot-verification" content="f29f0d03c5085b4d00aa"/>
-   </head>
-   <body>
-        <div class='navbar no-items section' id='navbar'></div>
-        <img alt='Logo' id='logo' src='./assets/logo.png'/>
-        <spam id='Name'>Welcome to Funty.org</spam>
-        <spam id='subtitle'>This website links all my projects that have something to do with websites.</spam>
-        <div id='links'>
-            <table>
-                <colgroup>
-                    <col style="width: 100%;">
-                 </colgroup>
-                <tr>
-                    <td>
-                        <a class='link' href='https://funty.org/birthday_countdown'><i aria-hidden='true'></i>Birthday countdown</a>
-                        <a class='link' href='https://funty.org/mastersofcrafters.de'><i aria-hidden='true'></i>Masters of Crafters Website</a>
-                        <a class='link' href='https://funty.org/pi-site/'><i aria-hidden='true'></i>PI-Site</a>
 
+<head>
+    <title>Funty.org</title>
+    <script src="https://kit.fontawesome.com/e818a9840c.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta name="author" content="Funty" />
+    <meta name="description" content="This website links all my projects that have something to do with websites." />
+    <meta name="keywords" content="funty, coding, websites, link, programming" />
+    <meta name="wot-verification" content="f29f0d03c5085b4d00aa" />
+</head>
 
-                        <a style="transform: translateY(6px);box-shadow: 0px 0px" class='link' !href='https://network.funty.org/'><i aria-hidden='true'></i>Funty´s Netzwerk website</a>
-                    </td>
-                    <td>
-                        <a class='fab fa-github git' href='https://github.com/FuntyGithub/birthday_countdown' title="Github"></a>
-                        <a class='fab fa-github git' href='https://github.com/FuntyGithub/mastersofcrafters.de' title="Github"></a>
-                        <a class='fab fa-github git' href='https://github.com/FuntyGithub/pi-site' title="Github"></a>
-
-
-                        <a style="transform: translateY(6px);box-shadow: 0px 0px"class='fab fa-github git' !href='https://github.com/FuntysNetzwerk/FuntysNetzwerkWebsite' title="Github"></a>
-                    </td>
-                </tr>
-            </table>
+<body>
+    <div class="header">
+        <!-- <div class="logo">
+            <img src="./assets/logo.png" alt="logo">
+        </div> -->
+        <div class="title">
+            <h1>Welcome to Funty.org</h1>
         </div>
-        <div class='footer'>
-            <a href='https://discord.com/users/417258282479124480' target='_blank'>
-                <i aria-hidden='true' class='fab fa-discord media' style='line-height: 38px; font-size: 10px;' title="Discord (Funty#8818)"></i>
-            </a>
-            <a href='https://www.guilded.gg/u/funty' target='_blank'>
-                <i aria-hidden='true' class='fab fa-guilded media' style='line-height: 38px; font-size: 10px;' title="Guilded (Funty)"></i>
-            </a>
-            <a href='https://github.com/FuntyGithub' target='_blank'>
-                <i aria-hidden='true' class='fab fa-github media' style='line-height: 38px; font-size: 10px;' title="Github (FuntyGithub)"></i>
-            </a>
-            <a href='https://www.twitch.tv/funty_' target='_blank'>
-                <i aria-hidden='true' class='fab fa-twitch media' style='line-height: 38px; font-size: 10px;' title="Twitch (funty_)"></i>
-            </a>
-            <a href='https://twitter.com/FuntyTwiitter' target='_blank'>
-                <i aria-hidden='true' class='fab fa-twitter media' style='line-height: 38px; font-size: 10px;' title="Twitter (FuntyTwiitter)"></i>
-            </a>
-            <a href='https://www.youtube.com/channel/UCijwf4UiyOA6QnWYl7-BJqA' target='_blank'>
-                <i aria-hidden='true' class='fab fa-youtube media' style='line-height: 38px; font-size: 10px;' title="Youtube (Funty)"></i>
-            </a>
+
+        <div class="nav">
+            <ul>
+                <li><a href="#home">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
         </div>
-    </body>
+
+        
+    </div>
+    <div class="content">
+        <div id="home">
+            <div class="container">
+                <h1 class="subtitle">About Me</h1>
+
+                <div class="container" style="text-align: left;">
+                    <a class="text me">I am Funty.</a><br>
+                    <a class="text me">I am <span id="age" title="17.05.2006" class="text">?</span> years old.</a><br>
+                    <a class="text me">I am a German student who likes to code. Don't expect too much from my projects, because basically the purpose behind my projects is to learn.</a><br>
+                    <a class="text me">I am working with HTML, CSS, JavaScript, SQL, Node.js and much more.</a><br>
+                    <a class="text me">I don`t learn a specific programming language, I think of a project and then learn what I need to make it. So I keep learning and don't get bored of theoretics.</a><br>
+                </div>
+
+                <br>
+
+                <div class="container">
+                    <h1 class="heading">GitHub</h1>
+                    <a href="https://github.com/FuntyGithub"><img src="./assets/socialmedia/github-white.svg" alt="github" class="containerImg"></a>
+                    <a class="text">My name on GitHub is <a class="text" href="https://github.com/FuntyGithub">FuntyGithub</a>.</a><br>
+                    <a class="text">There you can find the most of my projects.</a>
+                </div>
+
+                <div class="container">
+                    <h1 class="heading">Discord</h1>
+                    <a href="https://discord.com/users/417258282479124480"><img src="./assets/socialmedia/discord-blurple.svg" alt="discord" class="containerImg"></a>
+                    <a class="text">My Discord name is <a class="text" href="https://discord.com/users/417258282479124480">Funty#8818</a>.</a><br>
+                    <a class="text">This is a good way to contact me.</a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div id="projects">
+            <div class="container">
+                <h1 class="subtitle">Projects</h1>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">Funty.org</h1>
+                    <a class="text">This is the website you are currently on.</a><br>
+                    <a class="text">It is a simple website that links all my projects that have something to do with websites.</a><br>
+                    <button class="button" onclick="window.open('https:\/\/github.com/FuntyGithub/FuntyGithub.github.io','_blank')">GitHub</button><br>
+                </div>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">Birthday countdown</h1>
+                    <a class="text">This is a simple website that shows how many days are left until a birthday.</a><br>
+                    <a class="text">It is one of my first websites.</a><br>
+                    <button class="button" onclick="window.open('https:\/\/funty.org/birthday_countdown','_blank')">visit website</button>
+                    <button class="button" onclick="window.open('https:\/\/github.com/FuntyGithub/birthday_countdown','_blank')">GitHub</button><br>
+                </div>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">Credits website</h1>
+                    <a class="text">A example website to give credits to the people who helped you.</a><br>
+                    <button class="button" onclick="window.open('https:\/\/funty.org/credits-website','_blank')">visit website</button>
+                    <button class="button" onclick="window.open('https:\/\/github.com/FuntyGithub/credits-website','_blank')">GitHub</button><br>
+                </div>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">DateAPI website</h1>
+                    <a class="text">This website helps you to understand the minecraft account called DateAPI.</a><br>
+                    <a class="text">DateAPI is a bot I coded for minecraft.</a><br>
+                    <button class="button" onclick="window.open('https:\/\/funty.org/DateAPI_Website','_blank')">visit website</button>
+                    <button class="button" onclick="window.open('https:\/\/github.com/FuntyGithub/DateAPI_Website','_blank')">GitHub</button><br>
+                </div>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">mastersofcrafters.de</h1>
+                    <a class="text">This is the website was for a project in a game called minecraft.</a><br>
+                    <button class="button" onclick="window.open('https:\/\/funty.org/mastersofcrafters.de','_blank')">visit website</button>
+                    <button class="button" onclick="window.open('https:\/\/github.com/FuntyGithub/mastersofcrafters.de','_blank')">GitHub</button><br>
+                </div>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">text2image</h1>
+                    <a class="text">This website converts text to an image containing the text.</a><br>
+                    <button class="button" onclick="window.open('https:\/\/funty.org/text2image','_blank')">visit website</button>
+                    <button class="button" onclick="window.open('https:\/\/github.com/FuntyGithub/text2image','_blank')">GitHub</button><br>
+                </div>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">PI-Site</h1>
+                    <a class="text">This site calculate PI. (very slow)</a><br>
+                    <button class="button" onclick="window.open('https:\/\/funty.org/pi-site','_blank')">visit website</button>
+                    <button class="button" onclick="window.open('https:\/\/github.com/FuntyGithub/pi-site','_blank')">GitHub</button><br>
+                </div>
+
+                <div class="container projectDiv">
+                    <h1 class="heading">and more...</h1>
+                    <a class="text">I have also contributed to other websites such as <a class="text" title="tomatenkuchen.eu auf github" href="https://github.com/DEVTomatoCake/dashboard">tomatenkuchen.eu</a>.</a><br>
+                    <a class="text">There will always be more to come!</a><br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
 </html>
