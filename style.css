@@ -82,13 +82,22 @@ body {
     transition: 0.5s;
 }
 
-.container > .container {
+.container > .container, .projectDiv > .container {
     background-color: rgb(50, 50, 50);
 }
 
-.projectDiv {
+.projectChild {
     width: 25%;
-    height: 100%;
+    min-height: 225px;
+}
+
+.projectDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
 }
 
 .subtitle {
