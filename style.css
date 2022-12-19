@@ -1,3 +1,23 @@
+/* THEMES */
+.darkmode {
+    --primary-color: #FF9C3F;
+    --text-color: #ffb773;
+    --higlight-color: #ffc38b;
+    --shadow-color: #bb5a00;
+
+    --background-color: rgb(22, 22, 22);
+    --container-color: rgb(28, 28, 28);
+    --container-inner-color: rgb(50, 50, 50);
+    --container-highlight-color: rgb(55, 55, 55);
+
+}
+
+.lightmode {
+}
+
+
+/* GENERAL */
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,17 +26,15 @@ html {
     scroll-margin-top: 100px;
 }
 
-
-
 body {
-    background-color: rgb(22, 22, 22);
+    background-color: var(--background-color);
 	font-family: 'Be Vietnam Pro', sans-serif;
     text-align: center;
-    color: #FF9C3F;
+    color: var(--primary-color);
 }
 
 .header {
-    background-color: rgb(33, 33, 33);
+    background-color: var(--container-color);
     display: flex;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     border-radius: 5px;
@@ -29,7 +47,7 @@ body {
 
 .nav ul li {
     display: inline-block;
-    background-color: rgb(44, 44, 44);
+    background-color: var(--container-inner-color);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     margin: 0 10px;
     padding: 20px;
@@ -38,13 +56,21 @@ body {
 }
 
 .nav ul li:hover {
-    background-color: rgb(55, 55, 55);
+    background-color: var(--container-highlight-color);
     transition: 0.5s;
     transform: scale(1.05);
+    cursor: pointer;
+}
+.nav ul li:active {
+    background-color: var(--container-color);
+    transition: 0.5s;
+    transform: scale(0.95);
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
 }
 
+
 .nav ul li a {
-    color: #FF9C3F;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 20px;
 }
@@ -54,15 +80,15 @@ body {
     padding-left: 1%;
     padding-right: 1%;
     text-shadow: 
-    1px 1px 0 #bb5a00, 
-    1px 2px 0 #bb5a00, 
-    1px 3px 0 #bb5a00,  
-    1px 4px 0 #bb5a00,  
+    1px 1px 0 var(--shadow-color),
+    1px 2px 0 var(--shadow-color),
+    1px 3px 0 var(--shadow-color),
+    1px 4px 0 var(--shadow-color),
     5px 15px 15px black;
 }
 
 .container {
-    background-color: rgb(28, 28, 28);
+    background-color: var(--container-color);
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -83,7 +109,7 @@ body {
 }
 
 .container > .container, .projectDiv > .container {
-    background-color: rgb(50, 50, 50);
+    background-color: var(--container-inner-color);
 }
 
 .projectChild {
@@ -104,25 +130,26 @@ body {
     font-size: 40px;
     /* text-transform: lowercase; */
     text-shadow: 
-    1px 1px 0 #bb5a00, 
-    1px 2px 0 #bb5a00,    
+    1px 1px 0 var(--shadow-color), 
+    1px 2px 0 var(--shadow-color),    
     5px 5px 5px black;
 }
 
 .heading {
     font-size: 30px;
     text-shadow: 
-    1px 1px 0 #bb5a00,    
+    1px 1px 0 var(--shadow-color),    
     5px 5px 5px black;
 }
 
 .text {
     font-size: 20px;
     text-shadow: 5px 1px 5px black;
+    color: var(--text-color);
 }
 
 a:link, a:visited {
-    color: #faaf6a;
+    color: var(--higlight-color);
 }
 
 .containerImg {
@@ -133,25 +160,25 @@ a:link, a:visited {
 }
 
 .me:hover {
-    color: #faa95e;
+    color: var(--higlight-color)
 }
 
 .button {
-    background-color: #FF9C3F;
+    background-color: var(--primary-color);
     border: none;
     color: black;
     padding: 15px 32px;
     margin: 10px;
-    box-shadow: 0px 6px #f87e0d;
+    box-shadow: 0px 6px var(--shadow-color);
     transition: all 0.15s;
 }
 .button:hover {
-    box-shadow: 0px 8px #ff7b00;
+    box-shadow: 0px 8px var(--shadow-color);
     transform: translateY(-2px);
 }
 .button:active {
     transform: translateY(6px);
-    box-shadow: 0px 0px #FF9C3F;
+    box-shadow: 0px 0px var(--shadow-color);
 }
 
 #line1, #line2, #line3, #line4, #line5 {
@@ -172,5 +199,5 @@ a:link, a:visited {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #FF9C3F }
+    50% { border-color: var(--higlight-color) }
 }

@@ -72,5 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
         line5.style.whiteSpace = 'normal';
     });
 
-
 });
+
+function navBtn(element) {
+    window.location.href = element.children[0].href
+}
