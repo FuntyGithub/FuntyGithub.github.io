@@ -83,11 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.filter = document.body.style.filter == 'invert(100%)' ? 'invert(0%)' : 'invert(100%)';
             document.body.style.background = document.body.style.background == 'white' ? 'var(--background-color)' : 'white';
             text = "";
-        } else if (whitemode.includes(text) || darkmode.includes(text)) {
-        } else {
+        } else if (!(whitemode.includes(text) || darkmode.includes(text))) {
             text = "";
         }
-        console.log(text);
     });
 
 });
