@@ -72,6 +72,24 @@ document.addEventListener('DOMContentLoaded', function() {
         line5.style.whiteSpace = 'normal';
     });
 
+
+    // Whitemode :P
+    let text = "",
+    whitemode = "light",
+    darkmode = "dark";
+    document.body.addEventListener('keypress', function(event) {
+        text += event.key;
+        if (text === whitemode || text === darkmode) {
+            document.body.style.filter = document.body.style.filter == 'invert(100%)' ? 'invert(0%)' : 'invert(100%)';
+            document.body.style.background = document.body.style.background == 'white' ? 'var(--background-color)' : 'white';
+            text = "";
+        } else if (whitemode.includes(text) || darkmode.includes(text)) {
+        } else {
+            text = "";
+        }
+        console.log(text);
+    });
+
 });
 
 function navBtn(element) {
