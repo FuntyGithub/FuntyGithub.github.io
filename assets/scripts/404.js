@@ -61,9 +61,12 @@ function animation(status) {
 
             if (hit >= 2) {
                 div.classList.add('rainbow');
+                let cornerCounter = document.getElementById('cornerCounter');
+                if (cornerCounter && cornerCounter.innerHTML)  cornerCounter.innerHTML = "corner counter: " + (parseInt(cornerCounter.innerHTML.split(' ')[2]) + 1)
+                else cornerCounter.innerHTML = "corner counter: 1";
             }
 
-            console.log(hit);
+            // console.log(hit);
 
         }, 60);
     }
