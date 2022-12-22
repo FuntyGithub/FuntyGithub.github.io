@@ -1,22 +1,3 @@
-/* THEMES */
-.darkmode {
-    /* ORIGINAL */
-    --primary-color: #FF9C3F;
-    --text-color: #ffb773;
-    --higlight-color: #ffc38b;
-    --shadow-color: #bb5a00;
-
-    --background-color: rgb(22, 22, 22);
-    --container-color: rgb(28, 28, 28);
-    --container-inner-color: rgb(50, 50, 50);
-    --container-highlight-color: rgb(55, 55, 55);
-
-}
-
-.lightmode {
-}
-
-
 /* GENERAL */
 
 html {
@@ -28,13 +9,14 @@ html {
 }
 
 body {
-    background-color: var(--background-color);
+    background: var(--background-color);
 	font-family: 'Be Vietnam Pro', sans-serif;
     text-align: center;
     color: var(--primary-color);
+    /* background: linear-gradient(180deg, #F9FDF7, #228478, #0E343F, #071425, #0A1421, #2A1D27, #52272C, #8B2E2B, #DD8243) scroll; */
 }
 
-.header {
+#header {
     background-color: var(--container-color);
     display: flex;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
@@ -45,6 +27,33 @@ body {
     width: 99%;
     overflow: hidden;
 }
+
+.themeBtn {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 35px;
+    padding: 10px;
+    font-size: 35px;
+    background-color: var(--container-inner-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+}
+
+.themeBtn:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: var(--container-highlight-color);
+
+}
+
+.themeBtn:active {
+    transition: 0.5s;
+    transform: scale(0.95);
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
+}
+
 
 .nav ul li {
     display: inline-block;
@@ -201,4 +210,34 @@ a:link, a:visited {
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--higlight-color) }
+}
+
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.blur {
+    pointer-events: none;
+    filter: blur(10px);
+}
+
+.themeImg {
+    width: 384px;
+    height: 216px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+}
+
+.selected {
+    border: 5px solid var(--higlight-color);
 }
