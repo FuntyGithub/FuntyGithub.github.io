@@ -1,15 +1,4 @@
 /* THEMES */
-.theme-funty {
-    --primary-color: #FF9C3F;
-    --text-color: #ffb773;
-    --higlight-color: #ffc38b;
-    --shadow-color: #bb5a00;
-
-    --background-color: linear-gradient(180deg, #F9FDF7, #228478, #0E343F, #071425, #0A1421, #2A1D27, #52272C, #8B2E2B, #DD8243) scroll;
-    --container-color: rgb(28, 28, 28, 0.6);
-    --container-inner-color: rgb(50, 50, 50, 0.2);
-    --container-highlight-color: rgb(55, 55, 55, 0.6);
-}
 
 .theme-default {
     /* ORIGINAL */
@@ -22,8 +11,16 @@
     --container-color: rgb(28, 28, 28);
     --container-inner-color: rgb(50, 50, 50);
     --container-highlight-color: rgb(55, 55, 55);
-
 }
 
-.lightmode {
+.theme-funty {
+    --primary-color: #FF9C3F;
+    --text-color: #ffb773;
+    --higlight-color: #ffc38b;
+    --shadow-color: #bb5a00;
+
+    --background-color: linear-gradient(180deg, #F9FDF7, #228478, #0E343F, #071425, #0A1421, #2A1D27, #52272C, #8B2E2B, #DD8243) scroll;
+    --container-color: rgb(28, 28, 28, 0.6);
+    --container-inner-color: rgb(50, 50, 50, 0.2);
+    --container-highlight-color: rgb(55, 55, 55, 0.6);
 }
