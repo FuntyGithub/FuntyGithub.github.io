@@ -251,3 +251,8 @@ a:link, a:visited {
 .selected {
     border: 5px solid var(--higlight-color);
 }
+
+.popup > .container {
+    overflow: auto;
+    max-height: 80%;
+}

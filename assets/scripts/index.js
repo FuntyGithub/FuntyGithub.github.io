@@ -109,6 +109,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // closePopup('themeMenu');
         });
     }
+    
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key == 'Escape') {
+            closePopup('themeMenu');
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.id == 'themeMenu') {
+            closePopup('themeMenu');
+        }
+    });
+
 
 });
 
