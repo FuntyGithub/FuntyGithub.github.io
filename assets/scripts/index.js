@@ -117,12 +117,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    document.addEventListener('click', function(event) {
-        if (event.target.id == 'themeMenu') {
-            closePopup('themeMenu');
+    document.addEventListener('mousedown', function(event) {
+        // popup
+        if (event.target.classList.contains('popup')) {
+            closePopup(event.target.id);
         }
-    });
 
+        //middle click
+        // I am not sure if I want this .-.
+        // if (event.button == 1) {
+        //     if (event.target.classList.contains('button')) {
+        //         // event.preventDefault();
+        //         event.target.click();
+        //     }
+        // }
+    });
 
 });
 
