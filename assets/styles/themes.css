@@ -25,6 +25,30 @@
     --container-highlight-color: rgb(55, 55, 55, 0.6);
 }
 
+.theme-DateAPI {
+    --primary-color: #fdfdfd;
+    --text-color: #fdfdfd;
+    --higlight-color: rgb(243, 158, 169);
+    --shadow-color: grey;
+
+    --background-color: #222222;
+    --container-color: #353535;
+    --container-inner-color: #222222;
+    --container-highlight-color: rgb(55, 55, 55);
+}
+
+.theme-credits {
+    --primary-color: #E6E7F1;
+    --text-color: #E6E7F1;
+    --higlight-color: #8C9EFF;
+    --shadow-color: transparent;
+
+    --background-color: #131524;
+    --container-color: #232742;
+    --container-inner-color: #363952;
+    --container-highlight-color: #131524;
+}
+
 .theme-blackAndWhite {
     --primary-color: #dbdada;
     --text-color: #c4c4c4;
