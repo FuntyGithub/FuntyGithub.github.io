@@ -256,3 +256,15 @@ a:link, a:visited {
     overflow: auto;
     max-height: 80%;
 }
+
+#themeSearch {
+    background: var(--container-color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--text-color);
+    font-size: 20px;
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
+    transition: 0.5s;
+}

@@ -164,3 +164,15 @@ function closePopup(id) {
     document.getElementById('header').classList.remove('blur');
     document.getElementById('content').classList.remove('blur');
 }
+
+function themeSearch(text) {
+    let themeDivs = document.getElementsByClassName('themeDiv');
+    for (let i = 0; i < themeDivs.length; i++) {
+        let themeDiv = themeDivs[i];
+        if (themeDiv.children[1].innerHTML.toLowerCase().includes(text.toLowerCase())) {
+            themeDiv.style.display = 'inline-block';
+        } else {
+            themeDiv.style.display = 'none';
+        }
+    }
+}
