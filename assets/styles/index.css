@@ -266,5 +266,7 @@ a:link, a:visited {
     color: var(--text-color);
     font-size: 20px;
     box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
-    transition: 0.5s;
+}
+
+input[type="checkbox"] {
 }

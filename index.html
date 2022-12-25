@@ -143,6 +143,8 @@
         <div class="container">
             <h1 class="subtitle">Themes</h1>
             <input type="text" id="themeSearch" oninput="themeSearch(this.value)" placeholder="Search for a theme...">
+            <br>
+            <input type="checkbox" id="saveThemeToCookie" onchange="if(!hasCookiesAccepted()) openPopup('cookiesMenu');" ><a class="text">Save theme settings to cookie</a>
             
             <div id="themeMenuGrid">
                 <div class="themeDiv container" data-theme-name="theme-default">
@@ -177,11 +179,31 @@
                 
             </div>
 
-            <div id="closePopup" class="themeBtn" onclick="closePopup('themeMenu')">
+            <div class="themeBtn" onclick="closePopup('themeMenu')">
                 <!-- <i class="fas fa-times"></i> -->
                 <a class="text">CLOSE</a> 
             </div>
 
+        </div>
+
+    </div>
+
+    <div id="cookiesMenu" class="popup">
+        
+        <div class="container">
+            <h1 class="subtitle">Cookies</h1>
+            <a class="text">If you want to save your theme settings to a cookie, then this website obviously needs to save cookies.</a><br>
+            <a class="text">If you want to delete all cookies, then you can do this in your browser settings.</a><br>
+            <br>
+            <div>
+                <div class="themeBtn" onclick="acceptCookies(); ">
+                    <a class="text">ACCEPT</a>
+                </div>
+                <br>
+                <div class="themeBtn" onclick="cancelCookies(); ">
+                    <a class="text">CANCEL</a>
+                </div>
+            </div>
         </div>
 
     </div>
