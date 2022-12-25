@@ -224,12 +224,7 @@ function themeSearch(text) {
 }
 
 // cookies
-function setCookie(name, value, days, global) {    
-
-    let path = "; path=/index";
-    if (global) {
-        path = "; path=/";
-    }
+function setCookie(name, value, days) {    
 
     let expires = "";
     if (days) {
@@ -237,7 +232,7 @@ function setCookie(name, value, days, global) {
         date.setTime(date.getTime() + (days*24*60*60*1000));
         expires = "; expires=" + date.toUTCString();
     }
-    document.cookie = name + "=" + (value || "") + expires + path;
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
 function getCookie(name) {
