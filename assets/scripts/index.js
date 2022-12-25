@@ -226,11 +226,10 @@ function themeSearch(text) {
 // cookies
 function setCookie(name, value, days, global) {    
 
-    let path = "; path=" + window.location.pathname;
+    let path = "; path=/index";
     if (global) {
         path = "; path=/";
     }
-
 
     let expires = "";
     if (days) {
@@ -277,3 +276,5 @@ function saveThemeToCookieChange() {
         setCookie('savedTheme', 'false', 365);
     }
 }
+
+
