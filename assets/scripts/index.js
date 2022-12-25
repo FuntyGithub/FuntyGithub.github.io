@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.addEventListener('mousedown', function(event) {
-        console.log(event.target);
+        // console.log(event.target);
         // popup
         if (event.target == document.body) {
             let openPopup = document.getElementsByClassName('popup')[0];
@@ -199,7 +199,7 @@ function closePopup(id) {
     document.getElementById(id).style.display = 'none';
     
     let popups = document.querySelectorAll('.popup:is([style*="display: block"])');
-    console.log(popups);
+    // console.log(popups);
     for (let i = 0; i < popups.length; i++) {
         let popup = popups[i];
         popup.classList.remove('blur');
