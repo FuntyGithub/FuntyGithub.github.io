@@ -30,9 +30,10 @@ body {
 
 .themeBtn {
     margin-left: auto;
+    margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 35px;
+    /* margin-right: 35px; */
     padding: 10px;
     font-size: 35px;
     background-color: var(--container-inner-color);
@@ -42,7 +43,7 @@ body {
 
 .themeBtn:hover {
     transition: 0.5s;
-    transform: scale(1.05);
+    transform: scale(1.025);
     cursor: pointer;
     background-color: var(--container-highlight-color);
 
