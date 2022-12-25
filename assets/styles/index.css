@@ -17,7 +17,7 @@ body {
 }
 
 #header {
-    background-color: var(--container-color);
+    background: var(--container-color);
     display: flex;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     border-radius: 5px;
@@ -35,7 +35,7 @@ body {
     margin-right: 35px;
     padding: 10px;
     font-size: 35px;
-    background-color: var(--container-inner-color);
+    background: var(--container-inner-color);
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
 }
@@ -44,7 +44,7 @@ body {
     transition: 0.5s;
     transform: scale(1.025);
     cursor: pointer;
-    background-color: var(--container-highlight-color);
+    background: var(--container-highlight-color);
 
 }
 
@@ -60,19 +60,19 @@ body {
 }
 
 .themeDiv:hover {
-    background-color: var(--container-highlight-color);
+    background: var(--container-highlight-color);
     cursor: pointer;
 }
 
 .themeDiv:active {
-    background-color: var(--container-color);
+    background: var(--container-color);
     box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
 }
 
 
 .nav ul li {
     display: inline-block;
-    background-color: var(--container-inner-color);
+    background: var(--container-inner-color);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     margin: 0 10px;
     padding: 20px;
@@ -81,13 +81,13 @@ body {
 }
 
 .nav ul li:hover {
-    background-color: var(--container-highlight-color);
+    background: var(--container-highlight-color);
     transition: 0.5s;
     transform: scale(1.05);
     cursor: pointer;
 }
 .nav ul li:active {
-    background-color: var(--container-color);
+    background: var(--container-color);
     transition: 0.5s;
     transform: scale(0.95);
     box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
@@ -113,7 +113,7 @@ body {
 }
 
 .container {
-    background-color: var(--container-color);
+    background: var(--container-color);
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -133,8 +133,8 @@ body {
     transition: 0.5s;
 }
 
-.container > .container, .projectDiv > .container {
-    background-color: var(--container-inner-color);
+.container > .container, .projectDiv > .container, #themeMenuGrid > .container {
+    background: var(--container-inner-color);
 }
 
 .projectChild {
@@ -189,7 +189,7 @@ a:link, a:visited {
 }
 
 .button {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     border: none;
     color: black;
     padding: 15px 32px;
@@ -231,7 +231,7 @@ a:link, a:visited {
 
 .popup {
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -312,4 +312,9 @@ a:link, a:visited {
 .switch:checked + label:after {
     left: calc(80% - 0px);
     transform: translateX(-80%);
+}
+
+.slimmer {
+    max-width: 80% !important;
+    left: 10% !important;
 }

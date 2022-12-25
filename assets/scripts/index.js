@@ -132,7 +132,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.addEventListener('mousedown', function(event) {
+        console.log(event.target);
         // popup
+        if (event.target == document.body) {
+            let openPopup = document.getElementsByClassName('popup')[0];
+            closePopup(openPopup.id);
+        }
         if (event.target.classList.contains('popup')) {
             closePopup(event.target.id);
         }
