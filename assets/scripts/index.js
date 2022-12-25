@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // closePopup('themeMenu');
 
             // cookies
-            if (hasCookiesAccepted()) {
+            if (hasCookiesAccepted() && getCookie('savedTheme') == 'true') {
                 setCookie('theme', themeName, 365);
             }
         });

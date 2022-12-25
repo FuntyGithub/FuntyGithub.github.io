@@ -268,5 +268,43 @@ a:link, a:visited {
     box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
 }
 
-input[type="checkbox"] {
+.switch {
+    display: none;
+}
+
+.switch + label {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background: var(--container-color);
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
+    margin: 10px;
+    vertical-align: middle;
+    border: 1px solid var(--higlight-color);
+}
+
+.switch + label:after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 2.5px;
+    background: var(--text-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.switch:checked + label {
+    background: var(--container-highlight-color);
+}
+
+.switch:checked + label:after {
+    left: calc(80% - 0px);
+    transform: translateX(-80%);
 }
