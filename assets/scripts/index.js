@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    // console.log(hasCookiesAccepted());
     // Cookies
     if (getCookie('theme') != null) {
         document.body.classList.add(getCookie('theme'));
@@ -246,4 +247,10 @@ function acceptCookies() {
 function cancelCookies() {
     closePopup('cookiesMenu');
     document.getElementById('saveThemeToCookie').checked = false;
+}
+
+function saveThemeToCookieChange() {
+    if(!hasCookiesAccepted()) {
+        openPopup('cookiesMenu');
+    }
 }

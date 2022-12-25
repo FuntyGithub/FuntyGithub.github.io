@@ -144,7 +144,7 @@
             <h1 class="subtitle">Themes</h1>
             <input type="text" id="themeSearch" oninput="themeSearch(this.value)" placeholder="Search for a theme...">
             <br>
-            <input type="checkbox" id="saveThemeToCookie" onchange="if(!hasCookiesAccepted()) openPopup('cookiesMenu');" ><a class="text">Save theme settings to cookie</a>
+            <input type="checkbox" id="saveThemeToCookie" onchange="saveThemeToCookieChange()" ><a class="text">Save theme settings to cookie</a>
             
             <div id="themeMenuGrid">
                 <div class="themeDiv container" data-theme-name="theme-default">
