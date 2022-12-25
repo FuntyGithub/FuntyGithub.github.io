@@ -28,12 +28,11 @@ body {
     overflow: hidden;
 }
 
-.themeBtn {
+.themeBtn, .popupBtn {
     margin-left: auto;
-    margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    /* margin-right: 35px; */
+    margin-right: 35px;
     padding: 10px;
     font-size: 35px;
     background-color: var(--container-inner-color);
@@ -41,7 +40,7 @@ body {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
 }
 
-.themeBtn:hover {
+.themeBtn:hover, .popupBtn:hover {
     transition: 0.5s;
     transform: scale(1.025);
     cursor: pointer;
@@ -49,10 +48,15 @@ body {
 
 }
 
-.themeBtn:active {
+.themeBtn:active, .popupBtn:active {
     transition: 0.5s;
     transform: scale(0.95);
     box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1);
+}
+
+.popupBtn {
+    margin-right: 25px !important;
+    margin-left: 25px !important;
 }
 
 .themeDiv:hover {
