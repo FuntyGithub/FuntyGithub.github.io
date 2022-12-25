@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // console.log(hasCookiesAccepted());
     // Cookies
     if (getCookie('theme') != null) {
+        document.body.classList.remove(document.body.classList[0]);
         document.body.classList.add(getCookie('theme'));
     }
 
@@ -157,6 +158,10 @@ function navBtn(element) {
 function themeBtn() {
     openPopup('themeMenu');
 
+    if (getCookie('savedTheme') == 'true') {
+        document.getElementById('saveThemeToCookie').checked = true;
+    }
+
     let currentTheme = document.body.classList[0];
     let themeDivs = document.getElementsByClassName('themeDiv');
     for (let i = 0; i < themeDivs.length; i++) {
@@ -252,5 +257,11 @@ function cancelCookies() {
 function saveThemeToCookieChange() {
     if(!hasCookiesAccepted()) {
         openPopup('cookiesMenu');
+    }
+
+    if (document.getElementById('saveThemeToCookie').checked) {
+        setCookie('savedTheme', 'true', 365);
+    } else {
+        setCookie('savedTheme', 'false', 365);
     }
 }
