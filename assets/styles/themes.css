@@ -60,3 +60,15 @@
     --container-inner-color: rgb(50, 50, 50);
     --container-highlight-color: rgb(55, 55, 55);
 }
+
+.theme-golden {
+    --primary-color: #FFFFFF;
+    --text-color: #f7e0bc;
+    --higlight-color: #FCB542;
+    --shadow-color: #b4a998;
+
+    --background-color: radial-gradient(circle, #D69714, #3A250F);  
+    --container-color: #00000049;
+    --container-inner-color: #00000049;
+    --container-highlight-color: #00000099;
+}
