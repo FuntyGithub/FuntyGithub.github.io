@@ -2,15 +2,15 @@
 
 .theme-default {
     /* ORIGINAL */
-    --primary-color: #FF9C3F;
-    --text-color: #ffb773;
-    --higlight-color: #ffc38b;
-    --shadow-color: #bb5a00;
+    --primary-color: #FF9C3F; /* used e.g for titles. */
+    --text-color: #ffb773;  /* used e.g for text. */
+    --higlight-color: #ffc38b; /* used e.g for links. */
+    --shadow-color: #bb5a00; /* used e.g for title shadows. */
 
-    --background-color: rgb(22, 22, 22);
-    --container-color: rgb(28, 28, 28);
-    --container-inner-color: rgb(50, 50, 50);
-    --container-highlight-color: rgb(55, 55, 55);
+    --background-color: rgb(22, 22, 22); /* used for background. */
+    --container-color: rgb(28, 28, 28); /* used for containers. */
+    --container-inner-color: rgb(50, 50, 50); /* used for containers in containers. */
+    --container-highlight-color: rgb(55, 55, 55); /* used e.g for container hover. */
 }
 
 .theme-funty {
