@@ -11,10 +11,10 @@
     --button-text-color: #000000; /* used for button text. */
     --button-shadow-color: #bb5a00; /* used for button shadows. */
 
-    --background-color: rgb(22, 22, 22); /* used for background. */
-    --container-color: rgb(28, 28, 28); /* used for containers. */
-    --container-inner-color: rgb(50, 50, 50); /* used for containers in containers. */
-    --container-highlight-color: rgb(55, 55, 55); /* used e.g for container hover. */
+    --background-color: #161616; /* used for background. */
+    --container-color: #1C1C1C; /* used for containers. */
+    --container-inner-color: #323232; /* used for containers in containers. */
+    --container-highlight-color: #373737; /* used e.g for container hover. */
 }
 
 .theme-funty {
@@ -28,15 +28,15 @@
     --button-shadow-color: #bb5a00;
 
     --background-color: linear-gradient(180deg, #F9FDF7, #228478, #0E343F, #071425, #0A1421, #2A1D27, #52272C, #8B2E2B, #DD8243) scroll;
-    --container-color: rgb(28, 28, 28, 0.6);
-    --container-inner-color: rgb(50, 50, 50, 0.2);
-    --container-highlight-color: rgb(55, 55, 55, 0.6);
+    --container-color: #1c1c1c9A; 
+    --container-inner-color: #32323233;
+    --container-highlight-color: #3737379A;
 }
 
 .theme-DateAPI {
     --primary-color: #fdfdfd;
     --text-color: #fdfdfd;
-    --higlight-color: rgb(243, 158, 169);
+    --higlight-color: #F39EA9;
     --shadow-color: grey;
 
     --button-color: #fdfdfd;
@@ -46,7 +46,7 @@
     --background-color: #222222;
     --container-color: #353535;
     --container-inner-color: #222222;
-    --container-highlight-color: rgb(55, 55, 55);
+    --container-highlight-color: #373737;
 }
 
 .theme-credits {
@@ -75,10 +75,10 @@
     --button-text-color: #000000;
     --button-shadow-color: #9e9e9e;
 
-    --background-color: rgb(22, 22, 22);
-    --container-color: rgb(28, 28, 28);
-    --container-inner-color: rgb(50, 50, 50);
-    --container-highlight-color: rgb(55, 55, 55);
+    --background-color: #161616;
+    --container-color:#1C1C1C;
+    --container-inner-color: #323232;
+    --container-highlight-color: #373737;
 }
 
 .theme-golden {
