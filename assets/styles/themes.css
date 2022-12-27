@@ -81,7 +81,24 @@
     --container-highlight-color: #373737;
 }
 
-.theme-golden {
+/* Harry Potter */
+.theme-gryffindor {
+    --primary-color: #FFFFFF;
+    --text-color: #f7bcc1;
+    --higlight-color: #fc4252;
+    --shadow-color: #b4989a;
+
+    --button-color: #fc4252;
+    --button-text-color: #000000;
+    --button-shadow-color: #c72936;
+
+    --background-color: radial-gradient(circle, #6A2A2C, #3a0f11);  
+    --container-color: #00000049;
+    --container-inner-color: #00000049;
+    --container-highlight-color: #00000099;
+}
+
+.theme-hufflepuff {
     --primary-color: #FFFFFF;
     --text-color: #f7e0bc;
     --higlight-color: #FCB542;
@@ -92,6 +109,38 @@
     --button-shadow-color: #c78a29;
 
     --background-color: radial-gradient(circle, #D69714, #3A250F);  
+    --container-color: #00000049;
+    --container-inner-color: #00000049;
+    --container-highlight-color: #00000099;
+}
+
+.theme-ravenclaw {
+    --primary-color: #FFFFFF;
+    --text-color: #bce1f7;
+    --higlight-color: #42c1fc;
+    --shadow-color: #98abb4;
+
+    --button-color: #42C1FC;
+    --button-text-color: #000000;
+    --button-shadow-color: #298dc7;
+
+    --background-color: radial-gradient(circle, #004E7F, #0f2c3a);  
+    --container-color: #00000049;
+    --container-inner-color: #00000049;
+    --container-highlight-color: #00000099;
+}
+
+.theme-slytherin {
+    --primary-color: #FFFFFF;
+    --text-color: #bcf7ef;
+    --higlight-color: #42fce3;
+    --shadow-color: #98b4b0;
+
+    --button-color: #42fccd;
+    --button-text-color: #000000;
+    --button-shadow-color: #29c7ba;
+
+    --background-color: radial-gradient(circle, #0C3D37, #0f3a38);  
     --container-color: #00000049;
     --container-inner-color: #00000049;
     --container-highlight-color: #00000099;
