@@ -388,12 +388,10 @@ function saveCustomTheme() {
     localStorage.setItem("CUSTOM_THEME-"+theme['name'], JSON.stringify(theme));
     
     closePopup('customThemeMenu');
-    toast('Theme saved', 'The theme "' + theme['name'] + '" has been saved', '#00ff00');
+    toast('Theme saved', 'The theme "' + theme['name'] + '" has been saved <br>(refresh page to see it in the list)', '#00ff00');
 
     // switch to theme
     switchTheme('theme-'+theme['name'])
-
-    window.location.reload();
 }
 
 function switchTheme(theme) {
@@ -410,8 +408,13 @@ function deleteCustomTheme(themeName) {
     if(confirm('Are you sure you want to delete this theme?')) {
         localStorage.removeItem('CUSTOM_THEME-'+themeName);
         let themeDiv = document.querySelectorAll('[data-theme-name="theme-'+themeName+'"]')[0];
-        themeDiv.remove();
+        // themeDiv.remove();
         toast('Theme deleted', 'The theme "' + themeName + '" has been deleted', '#ff0000');
+
+        themeDiv.style.animation = 'themeOut 1.5s';
+        themeDiv.addEventListener('animationend', function() {
+            themeDiv.remove();
+        });
     }
 }
 

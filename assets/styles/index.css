@@ -375,3 +375,8 @@ input {
     from { right: 10px; }
     to { right: -100%; }
 }
+
+@keyframes themeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
