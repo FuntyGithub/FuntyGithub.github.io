@@ -392,6 +392,8 @@ function saveCustomTheme() {
 
     // switch to theme
     switchTheme('theme-'+theme['name'])
+
+    window.location.reload();
 }
 
 function switchTheme(theme) {
