@@ -358,9 +358,20 @@ input {
     align-items: center;
     z-index: 9000;
     padding: 10px;
+    animation:  toastIn 0.5s;
 }
 
 .toast h1 {
     font-size: 25px;
     margin: 10px;
+}
+
+@keyframes toastIn {
+    from { right: -100%; }
+    to { right: 10px; }
+}
+
+@keyframes toastOut {
+    from { right: 10px; }
+    to { right: -100%; }
 }

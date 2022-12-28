@@ -434,6 +434,11 @@ function toast(title, text, color) {
     document.body.appendChild(toast);
 
     setTimeout(function() {
-        toast.remove();
+        toast.style.animation = 'toastOut 4.5s';
+        
+        toast.addEventListener('animationend', function() {
+            toast.remove();
+        });
+
     }, 5000);
 }
