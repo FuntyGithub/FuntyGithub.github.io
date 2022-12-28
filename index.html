@@ -150,13 +150,13 @@
             
             <div id="themeMenuGrid">
                 <div class="themeDiv container" data-theme-name="theme-default">
-                    <img src="./assets/themes/Default.png" alt="theme-thumbnail" class="themeImg">
+                    <img src="./assets/themes/default.png" alt="theme-thumbnail" class="themeImg">
                     <h1 class="heading">Default</h1>
                     <a class="text">This is the default theme.</a>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-funty">
-                    <img src="./assets/themes/Funty.png" alt="theme-thumbnail" class="themeImg">
+                    <img src="./assets/themes/funty.png" alt="theme-thumbnail" class="themeImg">
                     <h1 class="heading">Funty</h1>
                     <a class="text">This is my personal favorite at the moment.</a>
                 </div>
@@ -204,6 +204,7 @@
                     <a class="text">Colors of the Hogwarts house Slytherin.</a>
                 </div>
                 
+                
             </div>
 
             <div class="popupBtn" onclick="closePopup('themeMenu')">
@@ -233,6 +234,63 @@
             </div>
         </div>
 
+    </div>
+
+    <div id="customThemeMenu" class="popup">
+        <div class="container draggable">
+            <h1 class="subtitle">Custom theme</h1>
+            <div style="display: inline-flex;">
+                <div>
+                    <a class="text">General</a>
+                    <br>
+                    <input type="text" data-customTheme="name" placeholder="Theme name">
+                    <br>
+                    <input type="text" data-customTheme="description" placeholder="Theme description">
+                    <br>
+                    <input type="text" data-customTheme="image" placeholder="Theme image url (1920x1080)">
+                </div>
+                <div>
+                    <a class="text">Text</a>
+                    <br>
+                    <input type="text" data-customtheme="primary-color" placeholder="primary-color (e.g. titel)" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="text-color" placeholder="text-color (e.g. text)" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="higlight-color" placeholder="higlight-color (e.g. links)" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="shadow-color" placeholder="shadow-color (e.g. title 3d effect)" oninput="customTheme(this.dataset.customtheme)">
+                </div>
+            </div>
+            <br>
+            <div style="display: inline-flex;">
+                <div>
+                    <a class="text">Buttons</a>
+                    <br>
+                    <input type="text" data-customtheme="button-color" placeholder="button-color" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="button-text-color" placeholder="button-text-color" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="button-shadow-color" placeholder="button-shadow-color (3d effect)" oninput="customTheme(this.dataset.customtheme)">
+                </div>
+                
+                <div>
+                    <a class="text">Background</a>
+                    <br>
+                    <input type="text" data-customtheme="background-color" placeholder="background-color" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="container-color" placeholder="container-color" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="container-inner-color" placeholder="container-inner-color (e.g. container in container)" oninput="customTheme(this.dataset.customtheme)">
+                    <br>
+                    <input type="text" data-customtheme="container-highlight-color" placeholder="container-highlight-color (on hover)" oninput="customTheme(this.dataset.customtheme)">
+                </div>
+            </div>
+
+            <div>
+                <button class="button" onclick="saveCustomTheme();">Create</button>
+                <button class="button" onclick="closePopup('customThemeMenu');">Cancel</button>
+            </div>
+        </div>
     </div>
 
 </body>
