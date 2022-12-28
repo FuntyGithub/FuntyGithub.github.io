@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let customThemeElement =
             '<div class="themeDiv container" data-theme-name="theme-'+theme.name+'">'+
                 '<img src="'+theme.image+'" alt="theme-thumbnail" class="themeImg" width="1920px" height="1080px">'+
-                '<h1 class="heading">'+ theme.name +'</h1>'+
+                '<h1 class="heading">'+ theme.name +' <i class="fas fa-trash" onclick="deleteCustomTheme(this.parentElement.parentElement.dataset.themeName.substring(6))" style="font-size: medium; color: var(--higlight-color)" title="Delete"></i></h1>'+
                 '<a class="text">'+ theme.description +'</a>'+
             '</div>';
             let customThemeDiv = document.createElement('div');
@@ -150,9 +150,12 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < themeDivs.length; i++) {
         let themeDiv = themeDivs[i];
         themeDiv.addEventListener('click', function() {
+
+            // check if clicked on trash icon
+            if (event.target.classList.contains('fa-trash')) return;
+
             let themeName = themeDiv.getAttribute('data-theme-name');
-            document.body.classList.remove(document.body.classList[0]);
-            document.body.classList.add(themeName);
+            switchTheme(themeName);
 
             this.classList.add('selected');
             let otherThemeDivs = document.getElementsByClassName('themeDiv');
@@ -164,18 +167,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             // closePopup('themeMenu');
 
-            // cookies
-            if (hasCookiesAccepted() && getCookie('savedTheme') == 'true') {
-                setCookie('theme', themeName, 365);
-            }
         });
     }
 
     let createCustomThemeElement = 
     '<div class="themeDiv container" data-theme-name="theme-custom">'+
         '<img src="./assets/themes/custom.png" alt="theme-thumbnail" class="themeImg">'+  
-        '<h1 class="heading">Custom</h1>'+
-        '<a class="text">Create your own theme</a>'+
+        '<h1 class="heading">create custom</h1>'+
+        '<a class="text">Select to create your own theme</a>'+
     '</div>';
 
     let createCustomThemeDiv = document.createElement('div');
@@ -394,11 +393,26 @@ function saveCustomTheme() {
     alert('Theme saved');
 
     // switch to theme
-    document.body.classList.remove(document.body.classList[0]);
-    document.body.classList.add('theme-'+theme['name']);
+    switchTheme('theme-'+theme['name'])
+}
 
-    // save theme to cookie
-    if (document.getElementById('saveThemeToCookie').checked) {
-        setCookie('theme', theme['name'], 365);
+function switchTheme(theme) {
+    document.body.classList.remove(document.body.classList[0]);
+    document.body.classList.add(theme);
+
+    // cookies
+    if (hasCookiesAccepted() && getCookie('savedTheme') == 'true') {
+        setCookie('theme', themeName, 365);
     }
+}
+
+function deleteCustomTheme(themeName) {
+
+    if(confirm('Are you sure you want to delete this theme?')) {
+        localStorage.removeItem('CUSTOM_THEME-'+themeName);
+        let themeDiv = document.querySelectorAll('[data-theme-name="theme-'+themeName+'"]')[0];
+        themeDiv.remove();
+        alert('Theme deleted');
+    }
+
 }
