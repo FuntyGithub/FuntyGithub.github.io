@@ -185,9 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
     themeMenuGrid.appendChild(createCustomThemeDiv);
 
     createCustomThemeDiv.addEventListener('click', function() {
-        // alert('This feature is not yet available');
         closePopup('themeMenu');
-        // openPopup('customThemeMenu');
         let div = document.getElementById('customThemeMenu');
         div.style.display = 'flex';
         div.classList.remove('blur')
@@ -379,7 +377,7 @@ function saveCustomTheme() {
 
         // check if value is empty
         if (value == '') {
-            return alert('Please fill in all fields');
+            return toast('Error', 'Please fill in all fields', '#ff0000');
         }
 
         let argument = input.getAttribute('data-customTheme');
@@ -390,7 +388,7 @@ function saveCustomTheme() {
     localStorage.setItem("CUSTOM_THEME-"+theme['name'], JSON.stringify(theme));
     
     closePopup('customThemeMenu');
-    alert('Theme saved');
+    toast('Theme saved', 'The theme "' + theme['name'] + '" has been saved', '#00ff00');
 
     // switch to theme
     switchTheme('theme-'+theme['name'])
@@ -407,12 +405,35 @@ function switchTheme(theme) {
 }
 
 function deleteCustomTheme(themeName) {
-
     if(confirm('Are you sure you want to delete this theme?')) {
         localStorage.removeItem('CUSTOM_THEME-'+themeName);
         let themeDiv = document.querySelectorAll('[data-theme-name="theme-'+themeName+'"]')[0];
         themeDiv.remove();
-        alert('Theme deleted');
+        toast('Theme deleted', 'The theme "' + themeName + '" has been deleted', '#ff0000');
     }
+}
 
+function toast(title, text, color) {
+    let toast = document.createElement('div');
+    toast.classList.add('container');
+    toast.classList.add('toast');
+    toast.style.border = '1px solid ' + color;
+    toast.style.borderLeft = '25px solid ' + color;
+
+    
+    let toastTitle = document.createElement('h1');
+    toastTitle.classList.add('heading');
+    toastTitle.innerHTML = title;
+    toast.appendChild(toastTitle);
+
+    let toastText = document.createElement('a');
+    toastText.classList.add('text');
+    toastText.innerHTML = text;
+    toast.appendChild(toastText);
+
+    document.body.appendChild(toast);
+
+    setTimeout(function() {
+        toast.remove();
+    }, 5000);
 }
