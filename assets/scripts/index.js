@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // make element
             let customThemeElement =
             '<div class="themeDiv container" data-theme-name="theme-'+theme.name+'">'+
-                '<img src="'+theme.image+'" alt="theme-thumbnail" class="themeImg" width="1920px" height="1080px" onerror=this.src="assets/themes/custom.png">'+
+                '<img src="'+theme.image+'" alt="theme-thumbnail" class="themeImg" width="1920px" height="1080px" onerror=this.src="assets/themes/err.png">'+
                 '<h1 class="heading">'+ theme.name +' <i class="fas fa-trash" onclick="deleteCustomTheme(this.parentElement.parentElement.dataset.themeName.substring(6))" style="font-size: medium; color: var(--higlight-color)" title="Delete"></i></h1>'+
                 '<a class="text">'+ theme.description +'</a>'+
             '</div>';
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let createCustomThemeElement = 
     '<div class="themeDiv container" data-theme-name="theme-custom">'+
-        '<img src="./assets/themes/custom.png" alt="theme-thumbnail" class="themeImg">'+  
+        '<img src="./assets/themes/custom.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src=\'assets/themes/err.png\'">'+  
         '<h1 class="heading">create custom</h1>'+
         '<a class="text">Select to create your own theme</a>'+
     '</div>';
