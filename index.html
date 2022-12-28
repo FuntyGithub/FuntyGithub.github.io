@@ -147,62 +147,62 @@
             <br>
             <input type="checkbox" class="switch" id="saveThemeToCookie" onchange="saveThemeToCookieChange()">
             <label for="saveThemeToCookie"></label> 
-            <a class="text">Save theme settings to cookie</a>
+            <span class="text">Save theme settings to cookie</span>
             
             <div id="themeMenuGrid">
                 <div class="themeDiv container" data-theme-name="theme-default">
                     <img src="./assets/themes/default.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">Default</h1>
-                    <a class="text">This is the default theme.</a>
+                    <p class="text">This is the default theme.</p>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-funty">
                     <img src="./assets/themes/funty.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">Funty</h1>
-                    <a class="text">This is my personal favorite at the moment.</a>
+                    <p class="text">This is my personal favorite at the moment.</p>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-DateAPI">
                     <img src="./assets/themes/DateAPI.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">DateAPI website</h1>
-                    <a class="text">This is the theme from the <a class="text" title="visit website" href="https://funty.org/DateAPI_Website/">DateAPI website</a>.</a>
+                    <p class="text">This is the theme from the <a class="text" title="visit website" href="https://funty.org/DateAPI_Website/">DateAPI website</a>.</p>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-credits">
                     <img src="./assets/themes/credits.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">credits website</h1>
-                    <a class="text">This is the theme from the <a class="text" title="visit website" href="https://funty.org/credits-website/">credits website</a>.</a>
+                    <p class="text">This is the theme from the <a class="text" title="visit website" href="https://funty.org/credits-website/">credits website</a>.</p>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-blackAndWhite">
                     <img src="./assets/themes/BlackAndWhite.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">Black And White</h1>
-                    <a class="text">This is a black and white theme.</a>
+                    <p class="text">This is a black and white theme.</p>
                 </div>
 
                 <!-- Harry Potter -->
                 <div class="themeDiv container" data-theme-name="theme-gryffindor">
                     <img src="./assets/themes/gryffindor.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">Gryffindor</h1>
-                    <a class="text">Colors of the Hogwarts house Gryffindor.</a>
+                    <p class="text">Colors of the Hogwarts house Gryffindor.</p>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-hufflepuff">
                     <img src="./assets/themes/hufflepuff.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">Hufflepuff</h1>
-                    <a class="text">Colors of the Hogwarts house Hufflepuff.</a>
+                    <p class="text">Colors of the Hogwarts house Hufflepuff.</p>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-ravenclaw">
                     <img src="./assets/themes/ravenclaw.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">Ravenclaw</h1>
-                    <a class="text">Colors of the Hogwarts house Ravenclaw.</a>
+                    <p class="text">Colors of the Hogwarts house Ravenclaw.</p>
                 </div>
 
                 <div class="themeDiv container" data-theme-name="theme-slytherin">
                     <img src="./assets/themes/slytherin.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src='assets/themes/err.png'">
                     <h1 class="heading">Slytherin</h1>
-                    <a class="text">Colors of the Hogwarts house Slytherin.</a>
+                    <p class="text">Colors of the Hogwarts house Slytherin.</p>
                 </div>
                 
                 
@@ -210,7 +210,7 @@
 
             <div class="popupBtn" onclick="closePopup('themeMenu')">
                 <!-- <i class="fas fa-times"></i> -->
-                <a class="text">CLOSE</a> 
+                <p class="text">CLOSE</p> 
             </div>
 
         </div>
@@ -221,16 +221,16 @@
         
         <div class="container">
             <h1 class="subtitle">Cookies</h1>
-            <a class="text">If you want to save your theme settings to a cookie, then this website obviously needs to save cookies.</a><br>
-            <a class="text">If you want to delete all cookies, then you can do this in your browser settings.</a><br>
+            <p class="text">If you want to save your theme settings to a cookie, then this website obviously needs to save cookies.<br>
+            If you want to delete all cookies, then you can do this in your browser settings.</p><br>
             <br>
             <div>
                 <div class="popupBtn" onclick="acceptCookies(); ">
-                    <a class="text">ACCEPT</a>
+                    <p class="text">ACCEPT</p>
                 </div>
                 <br>
                 <div class="popupBtn" onclick="cancelCookies(); ">
-                    <a class="text">CANCEL</a>
+                    <p class="text">CANCEL</p>
                 </div>
             </div>
         </div>
@@ -242,7 +242,7 @@
             <h1 class="subtitle">Custom theme</h1>
             <div style="display: inline-flex;">
                 <div>
-                    <a class="text">General</a>
+                    <p class="text">General</p>
                     <br>
                     <input type="text" data-customTheme="name" placeholder="Theme name">
                     <br>
@@ -251,7 +251,7 @@
                     <input type="text" data-customTheme="image" placeholder="Theme image url (1920x1080)">
                 </div>
                 <div>
-                    <a class="text">Text</a>
+                    <p class="text">Text</p>
                     <br>
                     <input type="text" data-customtheme="primary-color" placeholder="primary-color (e.g. titel)" oninput="customTheme(this.dataset.customtheme)">
                     <br>
@@ -266,7 +266,7 @@
             <br>
             <div style="display: inline-flex;">
                 <div>
-                    <a class="text">Buttons</a>
+                    <p class="text">Buttons</p>
                     <br>
                     <input type="text" data-customtheme="button-color" placeholder="button-color" oninput="customTheme(this.dataset.customtheme)">
                     <br>
@@ -276,7 +276,7 @@
                 </div>
                 
                 <div>
-                    <a class="text">Background</a>
+                    <p class="text">Background</p>
                     <br>
                     <input type="text" data-customtheme="background-color" placeholder="background-color" oninput="customTheme(this.dataset.customtheme)">
                     <br>
