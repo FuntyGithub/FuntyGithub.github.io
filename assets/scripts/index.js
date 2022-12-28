@@ -400,7 +400,7 @@ function switchTheme(theme) {
 
     // cookies
     if (hasCookiesAccepted() && getCookie('savedTheme') == 'true') {
-        setCookie('theme', themeName, 365);
+        setCookie('theme', theme, 365);
     }
 }
 
