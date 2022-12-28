@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             '<div class="themeDiv container" data-theme-name="theme-'+theme.name+'">'+
                 '<img src="'+theme.image+'" alt="theme-thumbnail" class="themeImg" width="1920px" height="1080px" onerror=this.src="assets/themes/err.png">'+
                 '<h1 class="heading">'+ theme.name +' <i class="fas fa-trash" onclick="deleteCustomTheme(this.parentElement.parentElement.dataset.themeName.substring(6))" style="font-size: medium; color: var(--higlight-color)" title="Delete"></i></h1>'+
-                '<a class="text">'+ theme.description +'</a>'+
+                '<p class="text">'+ theme.description +'</p>'+
             '</div>';
             let customThemeDiv = document.createElement('div');
             customThemeDiv.innerHTML = customThemeElement;
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     '<div class="themeDiv container" data-theme-name="theme-custom">'+
         '<img src="./assets/themes/custom.webp" alt="theme-thumbnail" class="themeImg" onerror="this.src=\'assets/themes/err.png\'">'+  
         '<h1 class="heading">create custom</h1>'+
-        '<a class="text">Select to create your own theme</a>'+
+        '<p class="text">Select to create your own theme</p>'+
     '</div>';
 
     let createCustomThemeDiv = document.createElement('div');
@@ -431,7 +431,7 @@ function toast(title, text, color) {
     toastTitle.innerHTML = title;
     toast.appendChild(toastTitle);
 
-    let toastText = document.createElement('a');
+    let toastText = document.createElement('p');
     toastText.classList.add('text');
     toastText.innerHTML = text;
     toast.appendChild(toastText);
