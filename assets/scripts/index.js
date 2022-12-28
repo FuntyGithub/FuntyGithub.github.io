@@ -104,9 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (key.startsWith('CUSTOM_THEME-')) {
             // get theme
             let theme = JSON.parse(localStorage.getItem(key));
-            console.log(theme);
-            console.log(theme.name);
-            console.log(theme['name']);
 
             // make element
             let customThemeElement =
@@ -380,10 +377,28 @@ function saveCustomTheme() {
     for (let i = 0; i < inputs.length; i++) {
         let input = inputs[i];
         let value = input.value;
+
+        // check if value is empty
+        if (value == '') {
+            return alert('Please fill in all fields');
+        }
+
         let argument = input.getAttribute('data-customTheme');
         theme[argument] = value;
     }
 
     // save to local storage
     localStorage.setItem("CUSTOM_THEME-"+theme['name'], JSON.stringify(theme));
+    
+    closePopup('customThemeMenu');
+    alert('Theme saved');
+
+    // switch to theme
+    document.body.classList.remove(document.body.classList[0]);
+    document.body.classList.add('theme-'+theme['name']);
+
+    // save theme to cookie
+    if (document.getElementById('saveThemeToCookie').checked) {
+        setCookie('theme', theme['name'], 365);
+    }
 }
