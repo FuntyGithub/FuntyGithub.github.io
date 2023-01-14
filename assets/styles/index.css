@@ -185,7 +185,7 @@ a:link, a:visited {
     
 }
 
-.me:hover {
+.me:hover, #age:hover {
     color: var(--higlight-color)
 }
 
