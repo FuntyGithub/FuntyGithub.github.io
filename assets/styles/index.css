@@ -140,7 +140,23 @@ body {
 .projectChild {
     width: 25%;
     min-height: 225px;
+    /* animation: projectChildsIn 2.5s ease-in-out paused; */
 }
+
+/* @keyframes projectChildsIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
 
 .projectDiv {
     display: flex;

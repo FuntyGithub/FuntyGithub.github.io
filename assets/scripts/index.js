@@ -1,3 +1,7 @@
+let searchQuery = window.location.search.substring(1);
+if (searchQuery != "") window.location.href = 'https://github.com/FuntyGithub/' + searchQuery;
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
