@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    let age = document.getElementById('age');
     let today = new Date();
     let birthdate = new Date('2006-05-17 00:00:00');
     let ageInYears = today.getFullYear() - birthdate.getFullYear();
@@ -42,12 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
         line1.style.borderRight = 'none';
         line1.style.width = '100%';
         line1.style.whiteSpace = 'normal';
-
         
+        line2.innerHTML = '<span class="text me">I am <span id="age" title="17.05.2006" class="text">[17.05.2006]</span> years old.</span><br>'
         line2.style.borderRight = '1px solid orange';
         line2.style.animationPlayState = 'running';
 
         let exactAge = (today.getTime() - birthdate.getTime()) / (1000 * 3600 * 24 * 365.25);
+        let age = document.getElementById('age');
         age.title = '17.05.2006 (' + exactAge.toFixed(2) + ' years)';
         
         let i = 0;
